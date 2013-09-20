@@ -14,7 +14,7 @@
    See the License for the specific language governing permissions and
    limitations under the License.
  */
-
+require_once 'bootstrap.php'; 
 require_once 'WebUtil/Microsoft_Http_Response.php';
 require_once 'WebUtil/HttpResponse.php';
 require_once 'Common/ACSUtil.php';
@@ -97,7 +97,7 @@ class PHPSvcUtil
     {
         $this->_validateAndBuidOptions();
 
-        $xsl_path = get_cfg_var('ODataphp_path');
+        $xsl_path = dirname(__FILE__);
 
         if (strlen($xsl_path) == 0)
         {
